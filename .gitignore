@@ -5,3 +5,5 @@ bin
 .project
 *.iml
 .idea
+/build
+.gradle

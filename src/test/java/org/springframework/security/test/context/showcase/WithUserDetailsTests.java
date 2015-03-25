@@ -32,7 +32,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.test.context.showcase.service.HelloMessageService;
 import org.springframework.security.test.context.showcase.service.MessageService;
-import org.springframework.security.test.context.support.WithSecurityContextTestExcecutionListener;
+import org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener;
 import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
@@ -52,7 +52,7 @@ import org.springframework.test.context.web.ServletTestExecutionListener;
         DependencyInjectionTestExecutionListener.class,
         DirtiesContextTestExecutionListener.class,
         TransactionalTestExecutionListener.class,
-        WithSecurityContextTestExcecutionListener.class})
+        WithSecurityContextTestExecutionListener.class})
 public class WithUserDetailsTests {
     @Autowired
     private MessageService messageService;
