@@ -19,30 +19,40 @@ repositories {
     maven { url 'http://repo.spring.io/snapshot' }
 }
 
-dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web")
-	compile("org.springframework.boot:spring-boot-starter-test")
+dependencies {	
+	compile('org.springframework:spring-webmvc:4.0.2.RELEASE')
+	compile('org.springframework:spring-tx:4.0.2.RELEASE')
 
-	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile('javax.servlet:javax.servlet-api:3.0.1')	
 
-	compile('org.springframework.security:spring-security-web:4.0.0.CI-SNAPSHOT')
-	compile('org.springframework.security:spring-security-config:4.0.0.CI-SNAPSHOT')
-	compile('org.springframework.security:spring-security-test:4.0.0.CI-SNAPSHOT')
+	compile('org.springframework.data:spring-data-jpa:1.5.1.RELEASE')
+	compile('org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final')
+	
+	compile('org.hibernate:hibernate-validator:4.1.0.Final')
 
+	compile('org.springframework.security:spring-security-web:4.0.0.M1')
+	compile('org.springframework.security:spring-security-config:4.0.0.M1')
+	compile('org.springframework.security:spring-security-test:4.0.0.M1')
+
+	
+	compile('org.thymeleaf:thymeleaf:2.1.2.RELEASE')
+	compile('org.thymeleaf:thymeleaf-spring4:2.1.2.RELEASE')
+	
 	compile('org.apache.httpcomponents:httpclient:4.3')
 	compile('com.googlecode.json-simple:json-simple:1.1')
 	compile('org.apache.commons:commons-lang3:3.0')
 
     testCompile "junit:junit:4.+"
     
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile('org.easytesting:fest-assert:1.4')
     
     testCompile 'org.springframework:spring-test-htmlunit:1.0.0.M2'
     
     testCompile "org.seleniumhq.selenium:selenium-htmlunit-driver:2.42.2"
 
-     testCompile 'org.seleniumhq.selenium:selenium-support:2.40.0'
+    testCompile 'org.seleniumhq.selenium:selenium-support:2.40.0'
+    testCompile 'org.mockito:mockito-all:1.9.5'
+    testCompile('org.springframework:spring-test-mvc-htmlunit:1.0.0.BUILD-SNAPSHOT')
 }
 
 war {
